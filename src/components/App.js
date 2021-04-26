@@ -11,10 +11,7 @@ class App extends React.Component {
     const response = await unsplash.get("/search/photos", {
       params: { query: term, per_page: 20 }
     });
-    /*.then callback used to get a response for async request promise from axios
-      .then(response => {
-        console.log(response.data.results);
-      });*/
+    
 
     this.setState({ images: response.data.results });
   };
